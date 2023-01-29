@@ -145,7 +145,7 @@ if (money>=cost && isStoreOpen === true) {
 
 when using a && or a || (checks if a value on the right or left is true), there's no need for the ===, because the
 
-isStoreOpen is a Boolean in itself, instead of writing ===true/false, you can just write " isStoreOpen / !isStoreOpen"
+isStoreOpen is a Boolean (a value that can be either TRUE or FALSE) in itself, instead of writing ===true/false, you can just write " isStoreOpen / !isStoreOpen"
 
 its exactly the same thing.
 */
