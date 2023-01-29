@@ -81,7 +81,7 @@ That's why the order is so important here.*/
 
 /* Example 2: You go to the shop with 50/40/30 dollars, the price for an item is 40. */
 
- let cash = 50 // 50 40 30//
+let cash = 50 // 50 40 30//
 let price = 40
 
 if (cash > price) {
@@ -89,11 +89,11 @@ if (cash > price) {
 }
 
 else if (cash === price) {
-    console.log ("you paid the exact amount, have a nice day!")
+    console.log("you paid the exact amount, have a nice day!")
 }
 
 else {
-    console.log ("Not enough money - You still owe X dollars")
+    console.log("Not enough money - You still owe X dollars")
 }
 
 /* Problem, change the X to give the actual amount */
@@ -106,11 +106,11 @@ if (cash1 > price1) {
 }
 
 else if (cash1 === price1) {
-    console.log ("you paid the exact amount, have a nice day!")
+    console.log("you paid the exact amount, have a nice day!")
 }
 
 else {
-    console.log (`Not enough money - You still owe ${price1 - cash1} dollars`)
+    console.log(`Not enough money - You still owe ${price1 - cash1} dollars`)
 }
 
 /* Cleaner way of doing it, adding the "difference* variable, difference = cash - price */
@@ -124,11 +124,11 @@ if (cash2 > price2) {
 }
 
 else if (cash2 === price2) {
-    console.log ("you paid the exact amount, have a nice day!")
+    console.log("you paid the exact amount, have a nice day!")
 }
 
 else {
-    console.log (`Not enough money - You still owe ${difference * -1} dollars`)
+    console.log(`Not enough money - You still owe ${difference * -1} dollars`)
 }
 
 /* the -1 serves to remove the - from the answer, since it would say -30 without it. */
@@ -137,7 +137,7 @@ let money = 50
 let cost = 40
 let isStoreOpen = true
 
-if (money>=cost && isStoreOpen === true) {
+if (money >= cost && isStoreOpen === true) {
     console.log('print the receipt')
 }
 
@@ -150,3 +150,72 @@ isStoreOpen is a Boolean (a value that can be either TRUE or FALSE) in itself, i
 its exactly the same thing.
 */
 
+/* TERNARY OPERATORS
+
+A shortcut for an if else condition
+
+( [Not part of the code] is the user) subscribed ? 'show video' : 'hide video' */
+
+let hot = true
+
+hot ? console.log('weather is hot outside') : console.log('weather is cold')
+
+// ---
+
+let subscribed1 = true
+let loggedIn1 = true
+let str = subscribed1 && loggedIn1 ? 'show the video' : 'hide the video'
+console.log(str);
+
+// --
+
+let dinero = 50
+let precio = 40
+let isStoreAbierta = true
+
+let str1 = cash >= price && isStoreAbierta ? 'give receipt' : 'dont give receipt'
+
+console.log(str1)
+
+/* LOOPS
+
+Loops repeat the same code over and over again, like this example, to make it count to 10.
+
+let count = 1;
+count = count + 1
+console.log(count);
+
+Repeating this code 10 times is not optimal. Remember this principle:
+DRY = Don't Repeat Yourself.
+
+We can use one of the three types of loops:
+
+for loop / while loop / do while loop | Best practice is for loop 
+
+let count = 1;
+
+while (count <= 10) {
+    console.log (count)
+    count = count + 1
+}
+*/
+
+/*
+
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+}
+
+*/
+
+// i means index
+//i = 0 means that i starts from 0
+// i < (i less) than how many times we want to loop, 3 times (0, 1 ,2)
+//i++ means increment i by 1
+
+for (let i = 1; i <= 20; i++) {
+    console.log (i)
+    if ( i % 3 === 0) {
+        console.log("F")
+    }
+}
