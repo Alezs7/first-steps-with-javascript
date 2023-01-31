@@ -254,10 +254,92 @@ else {
 }
 }
 
-const str0= "abc"
+const str0= "Hola Mundo"
 
-for (let i = 0; i <= str0.length; ++i) {
-console.log (str0[i])
+for (let i = 0; i < str0.length; ++i) {
+console.log(str0[i]);
 }
 
 /* str.lenght loops it for the amount of characters in the string */
+
+/* FUNCTIONS
+
+A block of code that does something. Logging into a website or logging out of a
+website is a function.
+
+Example, we want to welcome different people to our site, we could use
+
+
+
+.console.log ("Welcome to SJ, Harry")
+.console.log ("Welcome to SJ, Ale")
+.console.log ("Welcome to SJ, Dan")
+
+But let's remember again, Don't Repeat Yourself, so let's create a function
+
+* function welcomePersonToSJ()
+* .console.log ("Welcome to SJ, Harry")
+
+welcomePersonToSJ();
+
+*the last line CALLS the function to activate.
+
+Lines 280 and 281 are the function definition, and line 285 calls the function.
+
+The name in the function definition is hard coded, what can we do?
+
+we need to set a parameter (name in this case).
+
+
+* function welcomePersonToSJ(name)
+* .console.log(name)
+
+* welcomePersonToSJ()
+
+The thing is, this code won't say any names because the function call doesn't have
+anything in it. Let's see it in actual code */
+
+// function welcomePersonToSJ(firstName, lastName) {
+// console.log(`Welcome to Sistema Judicial, ${firstName} ${lastName}!`)
+// }
+
+// welcomePersonToSJ('Harry', 'Calderon');
+// welcomePersonToSJ('Ale', 'Doe');
+
+/* return statement
+function fn() {
+    return 5 // a return statement stops all the code that goes after it.
+    console.log ('my function')
+}
+
+console.log (fn());
+
+*/
+
+function sumOfTwoNumbers (num1, num2) {
+   return num1 + num2
+}
+//function definition is a parameter, like the p, it goes multiple lines
+
+
+console.log (sumOfTwoNumbers(10,10)) 
+//function call is an argument, it goes for one line, like the a
+
+
+/** Create a function that converts Celsius to Fahrenheit 
+ * 
+ * Formula:
+ * F = C x 1.8 + 32
+ * 
+ * @example
+ * convertCelsiusToFahrenheit(0) -> 32
+ * convertCelsiusToFahrenheit(10) -> 50
+ * convertCelsiusToFahrenheit(30) -> 86
+ * 
+*/
+
+function convertCelsiusToFahrenheit(celsius) {
+    return celsius * 1.8 + 32
+}
+
+console.log (convertCelsiusToFahrenheit(7))
