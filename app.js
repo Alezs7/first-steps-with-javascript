@@ -213,9 +213,51 @@ for (let i = 0; i < 3; i++) {
 // i < (i less) than how many times we want to loop, 3 times (0, 1 ,2)
 //i++ means increment i by 1
 
-for (let i = 1; i <= 20; i++) {
-    console.log (i)
+
+/* Quick exercises
+
+**Write a for-loop that loops through 1 to 20.
+
+*If the number is divisible by 3, print "Hola"
+*If the number is divisible by 5, print "Mundo"
+*If the number is divisible by 3 and 5, print "Hola Mundo"
+*If the number is *not* divisible by either 3 or 5, print the number.
+
+
+@example
+
+1 -> 1
+2 -> 2
+3 -> "Hola"
+4 -> 4
+5 -> "Mundo"
+...
+15 -> "Hola mundo"
+...
+20 -> "Mundo"
+
+*/
+
+
+for (let i = 1; i <= 20; ++i) {
     if ( i % 3 === 0) {
-        console.log("F")
+        console.log (`${i} -> "Hola"`)
     }
+    else if ( i % 5 === 0) {
+        console.log (`${i} -> "Mundo`)
+    }
+    else if ( i % 3 === 0 && i % 5 === 0) {
+        console.log (`${i} -> "Hola Mundo"`)
+    }
+else {
+    console.log (` ${i} -> ${i} `)
 }
+}
+
+const str0= "abc"
+
+for (let i = 0; i <= str0.length; ++i) {
+console.log (str0[i])
+}
+
+/* str.lenght loops it for the amount of characters in the string */
