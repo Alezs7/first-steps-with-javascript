@@ -490,4 +490,10 @@ SubscriptionStatus = VIP,
 console.log(user. )
 
 The space is for the property we want to acces, username, email, discordId, etc.
+
+The property basically becomes a string, and we can use [x number] to access any letter from the properties
+
+console.log(user.username[0]) will print A
+
+
 */
