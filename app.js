@@ -240,24 +240,24 @@ for (let i = 0; i < 3; i++) {
 
 
 for (let i = 1; i <= 20; ++i) {
-    if ( i % 3 === 0) {
-        console.log (`${i} -> "Hola"`)
+    if (i % 3 === 0) {
+        console.log(`${i} -> "Hola"`)
     }
-    else if ( i % 5 === 0) {
-        console.log (`${i} -> "Mundo`)
+    else if (i % 5 === 0) {
+        console.log(`${i} -> "Mundo`)
     }
-    else if ( i % 3 === 0 && i % 5 === 0) {
-        console.log (`${i} -> "Hola Mundo"`)
+    else if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`${i} -> "Hola Mundo"`)
     }
-else {
-    console.log (` ${i} -> ${i} `)
-}
+    else {
+        console.log(` ${i} -> ${i} `)
+    }
 }
 
-const str0= "Hola Mundo"
+const str0 = "Hola Mundo"
 
 for (let i = 0; i < str0.length; ++i) {
-console.log(str0[i]);
+    console.log(str0[i]);
 }
 
 /* str.lenght loops it for the amount of characters in the string */
@@ -316,13 +316,13 @@ console.log (fn());
 
 */
 
-function sumOfTwoNumbers (num1, num2) {
-   return num1 + num2
+function sumOfTwoNumbers(num1, num2) {
+    return num1 + num2
 }
 //function definition is a parameter, like the p, it goes multiple lines
 
 
-console.log (sumOfTwoNumbers(10,10)) 
+console.log(sumOfTwoNumbers(10, 10))
 //function call is an argument, it goes for one line, like the a
 
 
@@ -342,4 +342,152 @@ function convertCelsiusToFahrenheit(celsius) {
     return celsius * 1.8 + 32
 }
 
-console.log (convertCelsiusToFahrenheit(7))
+console.log(convertCelsiusToFahrenheit(7))
+
+// ARRAYS //
+
+/* 
+
+Arrays are a data structure that can hold multiple data values in one variable.
+
+let item1 = 20
+let item2 = 30
+let item3 = 40
+let item4 = 50
+let item5= 100
+
+it doesn't make sense to do multiple variables for this type of case, so we create an array.  */
+
+// let arr = [20, 30, 40, 50, 100]
+
+//you can put a string or a boolean in an array as well.
+//if you want to access something in an array you can count them starting from 0.
+//in this case, if we want to acces 20, we could use console.log(arr[0]) since it's
+//the first element of array
+
+// console.log(arr[0])
+
+//we can also use [arr.lenght - 1] to access the last element of an array
+
+// console.log (arr[arr.length - 1])
+
+// arr.push () is to add an element onto the end of an array
+
+// arr.push(200)
+
+//here's a tricky one, arr.filter
+// let newArr = arr.filter(element => element < 50)
+
+//this will run every single element in the original array [20,30,40,50,100] and create a
+//new array.
+
+// console.log (arr);
+
+// Filter grades
+
+let grades = ['A+', 'A', 'FAIL']
+
+let goodGrades = grades.filter((element) => {
+    console.log(element)
+    if (element !== 'FAIL') {
+        return true
+    }
+})
+
+// let goodGrades1 = grades.filter(element => !== 'FAIL')
+//clean way of doing it
+
+
+// how to do it without an array
+
+let grades1 = ['A+', 'A', 'FAIL']
+
+for (let i = 0; i < grades1.length; ++i) {
+    if (grades1[i] !== 'FAIL')
+
+
+        console.log(grades1[i])
+}
+
+
+//array map
+
+/*
+
+let arr = [1, 4, 9, 16]
+
+let newArray = arr.map ((element) => {
+    console.log(element)
+    return undefined;
+})
+
+another way of doing this part is
+
+let newArray = arr.map(element => undefined)
+
+console.log (newArray)
+
+*/
+
+
+let dollars = [1, 5, 10, 3] /*
+
+ Exercise: Convert dollars into cents using .map 
+
+let cents = dollars.map(element => {
+   console.log(element) 
+   return element * 100
+})
+
+console.log(cents)
+
+
+let cents = dollars.map(element => element * 100)
+console.log(cents)
+
+Now with a for loop
+
+
+
+let cents= []
+
+for (let i = 0; i < dollars.length; i++) {
+    cents.push(dollars[i] * 100);
+}
+
+console.log(cents)
+
+
+*/
+
+
+// OBJECTS
+
+//Objects are a way to store multiple properties in one variable.
+
+/*
+
+Instead of this:
+
+let userFirstName = Ale
+let userLastName = Z
+let userDiscordId = Ale Z#777
+let userSubscriptionStatus = VIP
+etc.
+
+We can use this:
+
+let user {
+username: Alezzu,
+email = alezzu@mail.com,
+DiscordId = Ale Z#777,
+SubscriptionStatus = VIP,
+}
+
+
+//This way we can store all variables in one and we can acces every one of them like this:
+
+console.log(user. )
+
+The space is for the property we want to acces, username, email, discordId, etc.
+*/
