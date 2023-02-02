@@ -607,3 +607,55 @@ register( {
 });
 
     console.log(users);
+
+
+/* DOM
+
+Dom means Document Object Model, it allows you to access and change the styliling and content
+of elements on a website.
+
+
+Any element can be accessed by writting .document.querySector(' ')
+*/
+
+
+//1st way of accessing an element
+console.log(document.querySelector('#title'));
+//This works for both id and classes. If we convert this id to a class we have to use a dot.
+//like css.
+
+console.log(document.querySelector('h1'))
+//you can also acces the element itself.
+
+
+//2nd way of accessing an element, only works if the document has an id.
+console.log(document.getElementById('title'))
+//This is better practice if you have an ID.
+
+
+//Remember, the orange text is what part will be changed.
+
+// document.querySelector('#title').innerHTML = 'Hi'
+
+/* When this code is active, the #title wil change from 
+"Please open the console and check the app.js file", to "Hi"
+
+Why is this useful?
+
+When using an email, we could use "example@email.com" and change it via innerHTML to an
+actual email, and make it dynamic!
+
+*/
+
+
+// We can also change CSS!
+
+
+// document.querySelector("#title").style.fontSize = '50px'
+
+// after the name of the section, we put .style and .whatever thing we want to edit.
+
+function toggleDarkMode() {
+document.querySelector('body').classList.toggle("dark-theme")
+}
+
