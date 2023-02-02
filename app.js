@@ -477,7 +477,7 @@ etc.
 
 We can use this:
 
-let user {
+let user = {
 username: Alezzu,
 email = alezzu@mail.com,
 DiscordId = Ale Z#777,
@@ -496,4 +496,114 @@ The property basically becomes a string, and we can use [x number] to access any
 console.log(user.username[0]) will print A
 
 
+We can also store multiple data inside objects, for example, we are doing a course, and we completed lessons 1, 2 and 3, we can store them like this:
+
+let user = {
+username: Alezzu
+lessonsCompleted: [1, 2, 3]
+}
+
+But lets say that we now have multiple users, now we have to use
+{ [ ] }, remember also to separate with a comma.
 */
+
+let users = [
+    {
+        username: "Alezzu",
+        email: "alezzu@mail.com",
+        password: "uno23",
+        discordId: "Ale Z#777",
+        SubscriptionStatus: "VIP",
+        lessonsCompleted: [0, 1],
+    },
+    {
+        username: "Neku",
+        email: "Neku@mail.com",
+        password: "one23",
+        discordId: "Neku#333",
+        SubscriptionStatus: "VIP",
+        lessonsCompleted: [0, 1],
+    },
+    {
+        username: "Abc",
+        email: "abc@mail.com",
+        password: "ichi23",
+        discordId: "Abc#777",
+        SubscriptionStatus: "VIP",
+        lessonsCompleted: [0, 1],
+    }
+]
+
+// console.log(users)
+
+/* if we use console.log(user) it will call both users instead of just one,
+we have to use .console.log(users[ number of user 0, 1, 2, etc. ])
+
+*/
+
+// console.log(users[0])
+
+/* and with that we can now access their properties and use .map! */
+
+// console.log(users[0].username)
+
+/* with that we can even recreate how to log an user! */
+
+/* function login(email, password) {
+    for (let i = 0; i < users.length; ++i) {
+        if (users[i].email === email) {
+            console.log(users[i]);
+            if(users[i].password === password) {
+                console.log('Welcome - details are correct!')
+            }
+            else {
+                console.log('Incorrect details - Try again')
+            }
+            return
+        }
+    }
+    console.log('Email does not match.')
+}
+
+login('alezzu@mail.com', 'uno23');
+
+
+*/
+
+/* What is happening here is that we are looping over every single object
+in our users array and we're checking:
+
+Does the user's email match the parameter from the login? (line 554)
+If it doesn't match, move onto the next object.
+
+But if it does match, let's check if the password matches as well (line 556)
+
+
+The return serves to stop the function from looping once it has already found its match.
+
+
+*/
+
+/* Create a register function that accepts: username, email, password, subscriptionStatus,
+discordId, lessonsCompleted.
+
+Inside the register function: 
+Create a user object
+Push this user object onto the 'users' array
+
+*/
+
+function register(user) {
+    users.push(user); //.push puts the object in whatever array is specified before the dot.
+}
+
+register( {
+    username: "athos",
+    email: "athos@sistemajudicial.com",
+    password: "athos123",
+    subscriptionStatus: "VIP",
+    discordId: "Athos#01",
+    lessonsCompleted: [0, 1]
+});
+
+    console.log(users);
